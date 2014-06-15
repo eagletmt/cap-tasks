@@ -34,10 +34,9 @@ namespace :deploy do
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-      within current_path do
-        if test("[[ -r #{fetch(:unicorn_pid)} ]]")
-          execute :kill, "-HUP `cat #{fetch(:unicorn_pid)}`"
-        end
+      path = current_path.join(fetch(:unicorn_pid))
+      if test("[[ -r #{path} ]]")
+        execute :kill, "-HUP `cat #{path}`"
       end
     end
   end
