@@ -1,5 +1,3 @@
-lock '3.2.1'
-
 set :application, 'fastladder'
 
 set :repo_url, 'https://github.com/fastladder/fastladder'
