@@ -1,12 +1,19 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.1'
+gem 'rails', '4.1.6'
 
 # Use mysql as the database for Active Record
-gem 'sqlite3'
-# gem 'mysql2'
-gem 'pg'
+group :test, :development do
+  gem 'sqlite3'
+  gem 'mysql2'
+end
+
+group :production do
+  gem 'unicorn'
+  gem 'pg'
+end
+
 gem 'haml'
 
 # current release version has no `feed.description` method. this is why :git used
@@ -73,13 +80,14 @@ group :test, :development do
   gem 'poltergeist'
   gem 'sinon-rails'
   gem 'thin'
+  gem 'eventmachine', github: 'eventmachine/eventmachine', ref: '4d53154a9e' # v1.0.3 cannot compile on ruby 2.2.0
 end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
-gem 'unicorn'
+# gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
