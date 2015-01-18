@@ -1,11 +1,4 @@
 GIT
-  remote: git://github.com/eventmachine/eventmachine.git
-  revision: 4d53154a9ea420cdc65bf8985b9156ad4c3730c9
-  ref: 4d53154a9e
-  specs:
-    eventmachine (1.0.3)
-
-GIT
   remote: git://github.com/fastladder/opml.git
   revision: 4b2d0434b3676f8701e1593f6a74c487bb1f1173
   specs:
@@ -14,7 +7,7 @@ GIT
 
 GIT
   remote: git://github.com/fnando/i18n-js.git
-  revision: d84d2533f4b0c75acc37b8abceafa10eab657b84
+  revision: 2a7472d87748107f0ce176a773397009310cbca8
   specs:
     i18n-js (3.0.0.rc8)
       i18n (~> 0.6)
@@ -88,7 +81,6 @@ GEM
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     curb (0.8.6)
-    daemons (1.1.9)
     diff-lcs (1.2.5)
     docile (1.1.5)
     domain_name (0.5.23)
@@ -122,8 +114,8 @@ GEM
       rails-dom-testing (~> 1.0)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
-    json (1.8.1)
-    kgio (2.9.2)
+    json (1.8.2)
+    kgio (2.9.3)
     konacha (3.3.0)
       actionpack (>= 3.1, < 5)
       capybara
@@ -147,9 +139,9 @@ GEM
       webrobots (>= 0.0.9, < 0.2)
     method_source (0.8.2)
     mime-types (2.4.3)
-    mini_magick (4.0.1)
+    mini_magick (4.0.2)
     mini_portile (0.6.2)
-    minitest (5.5.0)
+    minitest (5.5.1)
     multi_json (1.10.1)
     net-http-digest_auth (1.4)
     net-http-persistent (2.9.4)
@@ -172,10 +164,12 @@ GEM
       yard (~> 0.8)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
+    puma (2.10.2)
+      rack (>= 1.1, < 2.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.0)
-    rack-test (0.6.2)
+    rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.0)
       actionmailer (= 4.2.0)
@@ -240,7 +234,7 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
-    sax-machine (1.2.0)
+    sax-machine (1.3.0)
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -266,17 +260,13 @@ GEM
       sprockets (>= 2.8, < 4.0)
     term-ansicolor (1.3.0)
       tins (~> 1.0)
-    thin (1.6.3)
-      daemons (~> 1.0, >= 1.0.9)
-      eventmachine (~> 1.0)
-      rack (~> 1.0)
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
     tins (1.3.3)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (2.6.1)
+    uglifier (2.7.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     unf (0.1.4)
@@ -306,7 +296,6 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.1.0)
   coveralls
-  eventmachine!
   factory_girl_rails
   feed_searcher (>= 0.0.6)
   feedjira
@@ -323,6 +312,7 @@ DEPENDENCIES
   poltergeist
   pry-doc
   pry-rails
+  puma
   quiet_assets
   rails (= 4.2.0)
   rails_12factor
@@ -334,7 +324,6 @@ DEPENDENCIES
   simplecov
   simplecov-rcov
   sinon-rails
-  thin
   uglifier (>= 1.3.0)
   unicorn
   webmock
