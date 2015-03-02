@@ -12,9 +12,8 @@ set :upload_files, %w[
   config/unicorn.rb
   Gemfile.fastladder
   Gemfile.fastladder.lock
-  config/initializers/secret_token.rb
 ]
-set :linked_files, fetch(:upload_files) + %w[config/database.yml]
+set :linked_files, fetch(:upload_files) + %w[config/database.yml config/initializers/secret_token.rb]
 set :linked_dirs, %w[log tmp/pids tmp/cache tmp/sockets vendor/bundle]
 set :keep_releases, 5
 
