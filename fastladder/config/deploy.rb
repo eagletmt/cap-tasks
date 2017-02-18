@@ -1,8 +1,8 @@
 set :application, 'fastladder'
 
-set :repo_url, 'https://github.com/fastladder/fastladder'
+set :repo_url, 'https://github.com/eagletmt/fastladder'
 set :scm, :git
-set :branch, 'master'
+set :branch, 'rails50'
 
 set :deploy_to, '/home/fastladder/fastladder'
 set :log_level, :debug

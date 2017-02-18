@@ -1,2 +1,4 @@
 # credentials
 /config/initializers/secret_token.rb
+
+/log
